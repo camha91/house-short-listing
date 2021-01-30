@@ -103,12 +103,21 @@ function App() {
         address: '16000 Maldon Pl, Austin, TX 78722'
       }
     ]
-  )
+  );
+
+  function handleOnHouseClick(house) {
+    const newHouseList = housesList.filter((x) => x.id !== house.id);
+    console.log(newHouseList);
+    setHousesList(newHouseList);
+  };
 
   return (
     <div className="app">
       <h1>House Short-Listing</h1>
-      <HousesList houses={housesList} />
+      <HousesList
+        houses={housesList}
+        onHouseClick={handleOnHouseClick}
+      />
     </div>
   );
 }

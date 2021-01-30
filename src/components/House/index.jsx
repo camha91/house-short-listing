@@ -4,38 +4,31 @@ import './House.scss';
 
 House.propTypes = {
     house: PropTypes.object,
-    onHouseClick: PropTypes.func,
+    onClick: PropTypes.func,
 };
 
 House.defaultProps = {
     house: {},
-    onHouseClick: null,
+    onClick: null,
 }
 
 function House(props) {
-    const { house, onHouseClick } = props;
+    const { house, onClick } = props;
 
     return (
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Address</th>
-                <th>Bed(s)</th>
-                <th>Bath(s)</th>
-                <th>Sqft</th>
-                <th>Status</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>{house.ds}</td>
-                <td>{house.address}</td>
-                <td>{house.bds}</td>
-                <td>{house.ba}</td>
-                <td>{house.sqft}</td>
-                <td>{house.status}</td>
-                <td>${house.price}</td>
-            </tr>
-        </table>
+
+        <div className="centerwrapper">
+            <div onClick={onClick} className="square">
+                <li>{house.ds}</li>
+                <li>{house.address}</li>
+                <li>{house.bds} beds</li>
+                <li>{house.ba} bath</li>
+                <li>{house.sqft} sqft</li>
+                <li>{house.status}</li>
+                <li>${house.price}</li>
+            </div>
+        </div>
+
     );
 }
 
