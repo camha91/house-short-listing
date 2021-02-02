@@ -18,3 +18,39 @@
     margin: auto;
     width: 1000px;
 }
+
+.list-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+// .list-card-top,
+// .list-card-info {
+//     position: absolute;
+// }
+
+// .list-card-top {
+//     top: 0;
+// }
+
+// .list-card-info {
+//     bottom: 0;
+// }
+
+.list-card-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ul {
+    overflow-x: hidden;
+    white-space: nowrap;
+    height: 1em;
+    width: 100%;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}

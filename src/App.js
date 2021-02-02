@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import HousesList from './components/HousesList';
+import DropDown from './components/DropDown';
 
 function App() {
   const [housesList, setHousesList] = useState(
@@ -14,7 +15,9 @@ function App() {
         yearBuilt: 2021,
         status: 'Active',
         price: 421990,
-        address: 'Northlake Plan, Bluffview, Leander, TX 78641'
+        address: 'Northlake Plan, Bluffview, Leander, TX 78641',
+        img: 'https://photos.zillowstatic.com/fp/584443ef993b502b56626c5bf794b799-p_e.jpg',
+        href: 'https://www.zillow.com/homedetails/2705-Prosperity-Leander-TX-78641/89654839_zpid/'
       },
       {
         ds: '01-22-21',
@@ -105,6 +108,7 @@ function App() {
     ]
   );
 
+
   function handleOnHouseClick(house) {
     const newHouseList = housesList.filter((x) => x.id !== house.id);
     console.log(newHouseList);
@@ -114,6 +118,7 @@ function App() {
   return (
     <div className="app">
       <h1>House Short-Listing</h1>
+      {/* <DropDown /> */}
       <HousesList
         houses={housesList}
         onHouseClick={handleOnHouseClick}
