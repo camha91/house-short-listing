@@ -1,13 +1,13 @@
-.square {
+.list-card {
     float: left;
     margin: 1px;
-    width: 200px;
+    width: 250px;
     height: 200px;
 
     color: green;
     text-align: left;
 
-    border: 1px solid gray;
+    border: 1px solid red;
     border-radius: 8px;
 
     cursor: pointer;
@@ -19,38 +19,52 @@
     width: 1000px;
 }
 
-.list-card {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.list-card-top {
+    width: 250px;
+    height: 100px;
+    margin: -10px 0px 5px 0px;
+    background-color: green;
 }
 
-// .list-card-top,
-// .list-card-info {
-//     position: absolute;
-// }
+.list-card-info {
+    background-color: yellow;
+}
 
-// .list-card-top {
-//     top: 0;
-// }
-
-// .list-card-info {
-//     bottom: 0;
-// }
-
-.list-card-img {
+a.list-card-img img {
     max-width: 100%;
     max-height: 100%;
-}
-
-ul {
-    overflow-x: hidden;
-    white-space: nowrap;
-    height: 1em;
     width: 100%;
-    padding: 0;
+    height: auto;
 }
 
-li {
+.list-card-heading {
+    position: relative;
+}
+
+.list-card-price {
+    position: absolute;
+    line-height: 32px;
+    height: 32px;
+
     display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+ul.list-card-details {
+    position: absolute;
+    padding: 10px 0;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+
+    list-style: none;
+    max-width: 100%;
+}
+
+ul.list-card-details li {
+    display: inline-block;
+    padding: 0 3px;
 }
